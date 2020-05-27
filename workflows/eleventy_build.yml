@@ -9,8 +9,7 @@ jobs:
       - name: Build
         uses: TartanLlama/actions-eleventy@v1.2
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.6.1
-        env:
-          PUBLISH_DIR: _site 
-          PUBLISH_BRANCH: gh-pages
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./public
