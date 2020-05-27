@@ -1,5 +1,5 @@
 ---
-title: 'Post #1 Edited'
+title: 'Post #1 Edited!'
 date: 2019-06-18
 tags:
 - demo-content
