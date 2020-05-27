@@ -18,7 +18,7 @@ jobs:
       - name: Deploy
         uses: docker://peaceiris/gh-pages:v2
         env:
-          PUBLISH_DIR: ./public
+          PUBLISH_DIR: ./dist
           PUBLISH_BRANCH: gh-pages
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         with:
