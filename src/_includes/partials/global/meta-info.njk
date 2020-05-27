@@ -12,12 +12,12 @@
 {% endif %}
 
 <title>{{ pageTitle }}</title>
-<link rel="canonical" href="{{ currentUrl }}" />
+<link rel="canonical" href="{{ currentUrl | url }}" />
 
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ currentUrl }}" />
+<meta property="og:url" content="{{ currentUrl | url }}" />
 
 {% if site.authorHandle %}
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
