@@ -16,11 +16,10 @@ jobs:
       - name: Build
         run: npm run production
       - name: Deploy
-        uses: docker://peaceiris/gh-pages:v2
+        uses: peaceiris/actions-gh-pages@v2
         env:
           PUBLISH_DIR: _site 
           PUBLISH_BRANCH: gh-pages
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         with:
-          emptyCommits: false  
           forceOrphan: true 
