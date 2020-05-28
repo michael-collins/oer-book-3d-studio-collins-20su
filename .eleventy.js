@@ -51,6 +51,13 @@ module.exports = function(config) {
       .slice(0, site.maxPostsPerPage);
   });
 
+  module.exports = function(eleventyConfig) {
+    // blogposts collection
+    eleventyConfig.addCollection("lessons", function(collection) {
+      return collection.getFilteredByGlob("./src/lessons/*.md").reverse();
+    });
+  };
+
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);

@@ -1,0 +1,25 @@
+<section id="three">
+  <div class="container">
+    <h3>My lessons</h3>
+    <p>
+      Here are my lessons.
+    </p>
+    <div class="features">
+      {% for lesson in collections.lessons %}
+        {% if lesson.data.public %}
+          <article>
+            <a href="#" class="image">
+              <img src="images/{{ lesson.data.image }}" alt=""/>
+            </a>
+            <div class="inner">
+              <h4>{{ lesson.data.title }}</h4>
+              <p>
+                {{ lesson.data.description }}
+              </p>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

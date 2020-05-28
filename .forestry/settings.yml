@@ -13,6 +13,13 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: directory
+  path: src/lessons
+  label: Lessons
+  create: documents
+  match: "*.md"
+  templates:
+  - lesson
 - type: heading
   label: Globals
 - type: document
