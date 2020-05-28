@@ -1,3 +1,25 @@
+{% if menu.items %}
+  <nav class="nav" aria-label="{{ariaLabel}}">
+    <ul class="[ nav__list ] [ box-flex align-center md:space-before ]">
+      {% for item in menu.items %}
+        {% set relAttribute = '' %}
+        {% set currentAttribute = '' %}
+
+        {% if item.rel %}
+          {% set relAttribute = ' rel="' + item.rel + '"' %}
+        {% endif %}
+
+        {% if page.url == item.url %}
+          {% set currentAttribute = ' aria-current="page"' %}
+        {% endif %}
+
+        <li class="nav__item">
+          <a href="{{ item.url | url }}"{{ relAttribute | safe }}{{ currentAttribute | safe }}>{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
 {% if navigation.items %}
   <nav class="nav" aria-label="{{ariaLabel}}">
     <ul class="[ nav__list ] [ box-flex align-center md:space-before ]">

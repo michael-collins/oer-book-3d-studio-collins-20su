@@ -1,10 +1,25 @@
 <section id="three">
   <div class="container">
+  
     <h3>My lessons</h3>
     {# {% set lesson-description %}
     <h3>Description</h3>
     {% endset %} #}
+{% set navPages = collections.all | eleventyNavigation %}
+{% macro renderNavListItem(entry) -%}
+<li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+  <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+{%- if entry.children.length -%}
+  <ul>
+    {%- for child in entry.children %}{{ renderNavListItem(child) }}{% endfor -%}
+  </ul>
+{%- endif -%}
+</li>
+{%- endmacro %}
 
+<ul>
+{%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+</ul>
 
     <div class="features">
       {% for lesson in collections.lessons %}

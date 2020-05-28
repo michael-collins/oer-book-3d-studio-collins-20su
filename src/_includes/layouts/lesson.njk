@@ -1,0 +1,9 @@
+{% extends 'layouts/base.njk' %}
+{% block content %}
+schedule layout.
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/lesson-description.njk" %}
+    {% include "partials/components/lesson-learning-resources.njk" %}
+    {% include "partials/components/lesson-steps-to-completion.njk" %}
+  </main>
+{% endblock %}

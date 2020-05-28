@@ -4,6 +4,10 @@ public: true
 tags: lessons
 week: 2
 header-image:
+eleventyNavigation:
+  key: Lesson 02
+  parent: Lessons
+  order: 2
 ---
 # Description
 

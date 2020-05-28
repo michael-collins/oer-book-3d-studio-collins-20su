@@ -2,6 +2,12 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const fs = require("fs");
 
+// Navigation plugin
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+};
+
 // Import filters
 const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
@@ -13,6 +19,12 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 
 // Import data files
 const site = require('./src/_data/site.json');
+
+// Add YAML data file support
+const yaml = require("js-yaml");
+module.exports = eleventyConfig => {
+  eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
+};
 
 module.exports = function(config) {
   // Filters
@@ -57,6 +69,7 @@ module.exports = function(config) {
       return collection.getFilteredByGlob("./src/lessons/*.md").reverse();
     });
   };
+  
 
   // Plugins
   config.addPlugin(rssPlugin);

@@ -1,0 +1,15 @@
+---
+# Menu
+items:
+- text: Schedule
+  url: /schedule/
+  external: false
+- text: Resources
+  url: /resources/
+  external: false
+- text: Syllabus
+  url: /syllabus/
+  external: false
+- text: About
+  url: /about/
+  external: false
