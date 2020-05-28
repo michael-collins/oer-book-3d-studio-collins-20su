@@ -5,13 +5,6 @@ fields:
 - type: text
   name: title
   label: Lesson title
-- type: datetime
-  name: date
-  label: Post date
-  default: now
-  config:
-    date_format: YYYY-MM-DD
-    export_format: YYYY-MM-DD
 - type: list
   name: tags
   label: tags

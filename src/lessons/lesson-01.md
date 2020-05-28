@@ -2,6 +2,7 @@
 title: 'Lesson 01'
 public: true
 tags: lessons
+week: 1
 ---
 
 # {{ page.title }}
