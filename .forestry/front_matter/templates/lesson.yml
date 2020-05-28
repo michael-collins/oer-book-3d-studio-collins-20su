@@ -17,7 +17,7 @@ fields:
     required: true
     default: false
     hidden: false
-  - type: select
+- type: select
   name: week
   label: Assign to week
   config:
