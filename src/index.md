@@ -2,6 +2,7 @@
 layout: home
 title: 3D Studio
 postsHeading: Latest posts
+lessonsHeading: Schedule of work
 archiveButtonText: See all posts
 socialImage: ''
 ---

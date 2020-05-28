@@ -1,0 +1,38 @@
+{# <div class="schedule-container">
+  <div class="inner-wrapper">
+
+    {% for lesson in collections.lessons %}
+      {% if lesson.data.public %}
+        <div class="week-item">
+          <a href="#" class="image">
+            <img src="images/{{ lesson.data.image }}" alt=""/>
+          </a>
+          <div class="inner">
+            <h4>{{ lesson.data.title }}</h4>
+            <p>
+              {{ lesson.data.description }}
+            </p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div> #}
+
+
+{% if lessonsListItems.length %}
+  <section class="[ post-list ] [ pad-top-700 gap-bottom-900 ]">
+    <div class="[ inner-wrapper ] [ sf-flow ]">
+      <h2 class="[ post-list__heading ] [ text-700 md:text-800 ]">{{ lessonsListHeading }}</h2>
+      <ol class="[ post-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
+        {% for item in lessonsListItems %}
+            <li class="post-list__item">
+              <h3 class="font-base leading-tight text-600 weight-mid">
+                <a href="{{ item.url | url }}" class="post-list__link" rel="bookmark">{{ item.data.title }}</a>
+              </h3>
+            </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+{% endif %}

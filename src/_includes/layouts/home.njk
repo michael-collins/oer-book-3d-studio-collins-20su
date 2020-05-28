@@ -7,6 +7,10 @@
   {{ content | safe }}
 {% endset %}
 
+{# Lesson list content #}
+{% set lessonsListHeading = lessonsHeading %}
+{% set lessonsListItems = collections.lessons %}
+
 {# Post list content #}
 {% set postListHeading = postsHeading %}
 {% set postListItems = collections.postFeed %}
@@ -18,10 +22,10 @@
 {% endif %}
 
 {% block content %}
-{% include 'lessons.njk' %}
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
-    {% include "partials/components/post-list.njk" %}
+    {% include "partials/components/lessons-list.njk" %}
+    {# {% include "partials/components/post-list.njk" %} #}
     {% include "partials/components/pagination.njk" %}
   </main>
 {% endblock %}
