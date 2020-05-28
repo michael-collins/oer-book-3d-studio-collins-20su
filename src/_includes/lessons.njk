@@ -1,9 +1,11 @@
 <section id="three">
   <div class="container">
     <h3>My lessons</h3>
-    <p>
-      Here are my lessons.
-    </p>
+    {# {% set lesson-description %}
+    <h3>Description</h3>
+    {% endset %} #}
+
+
     <div class="features">
       {% for lesson in collections.lessons %}
         {% if lesson.data.public %}

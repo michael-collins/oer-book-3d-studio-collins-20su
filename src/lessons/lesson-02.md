@@ -3,8 +3,12 @@ title: 'Lesson 02'
 public: true
 tags: lessons
 week: 2
+header-image:
 ---
-
-# {{ page.title }}
+# Description
 
 This is information related to lesson 2.
+
+# Learning resources
+
+# Steps to completion

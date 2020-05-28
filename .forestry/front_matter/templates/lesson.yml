@@ -10,7 +10,14 @@ fields:
   label: tags
   default: [lessons]
   hidden: true
-- type: select
+- type: boolean
+  name: public
+  label: Published
+  config:
+    required: true
+    default: false
+    hidden: false
+  - type: select
   name: week
   label: Assign to week
   config:
