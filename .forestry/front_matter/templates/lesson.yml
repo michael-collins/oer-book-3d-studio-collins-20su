@@ -7,7 +7,7 @@ fields:
   label: Lesson title
 - type: datetime
   name: date
-  label: date
+  label: Post date
   default: now
   config:
     date_format: YYYY-MM-DD
@@ -17,3 +17,11 @@ fields:
   label: tags
   default: [lessons]
   hidden: true
+- type: select
+  name: week
+  label: Assign to week
+  config:
+    required: true
+    default: not-posted
+    options: [not-posted,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  description: 'Choose which week to post the lesson to the schedule'
